@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Panel – SwiftShip</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🚚%3C/text%3E%3C/svg%3E" />
+    <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🚚%3C/text%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="responsive.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="index.html#home" class="logo" aria-label="SwiftShip home">
+          <span class="logo-mark">🚚</span>
+          <span class="logo-text">SwiftShip</span>
+        </a>
+
+        <button
+          class="nav-toggle"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+        >
+          <span class="nav-toggle-line"></span>
+          <span class="nav-toggle-line"></span>
+          <span class="nav-toggle-line"></span>
+        </button>
+
+        <nav class="site-nav" aria-label="Primary navigation">
+          <ul class="nav-list">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="admin.html">Admin</a></li>
+            <li><a href="agent.html">Agent</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="section">
+      <div class="container dashboard-layout">
+        <aside class="dashboard-sidebar">
+          <h1 style="font-size:1.35rem;margin:0 0 0.6rem;">Admin panel</h1>
+          <button
+            class="dashboard-nav-btn is-active"
+            data-admin-tab="shipments"
+          >
+            All shipments
+          </button>
+          <button class="dashboard-nav-btn" data-admin-tab="prices">
+            Manage prices
+          </button>
+          <button class="dashboard-nav-btn" data-admin-tab="destinations">
+            Manage destinations
+          </button>
+          <button class="dashboard-nav-btn" data-admin-tab="agents">
+            Manage agents
+          </button>
+        </aside>
+
+        <section class="dashboard-main">
+          <div class="stat-row">
+            <div class="stat-card">
+              <div class="stat-label">Total shipments</div>
+              <div class="stat-value" id="admin-total-shipments">0</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label">Active today</div>
+              <div class="stat-value" id="admin-active-today">0</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label">Registered agents</div>
+              <div class="stat-value" id="admin-total-agents">0</div>
+            </div>
+          </div>
+
+          <div class="dashboard-panels">
+            <div
+              class="dashboard-panel is-active"
+              data-admin-panel="shipments"
+            >
+              <h2 style="margin-top:0;">Shipments</h2>
+              <form class="form" id="admin-add-shipment-form">
+                <div class="form-row">
+                  <div class="form-field">
+                    <label class="form-label" for="admin-from">From</label>
+                    <input id="admin-from" class="input" type="text" required />
+                  </div>
+                  <div class="form-field">
+                    <label class="form-label" for="admin-to">To</label>
+                    <input id="admin-to" class="input" type="text" required />
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-field">
+                    <label class="form-label" for="admin-agent">
+                      Assign agent
+                    </label>
+                    <input id="admin-agent" class="input" type="text" />
+                  </div>
+                  <div class="form-field">
+                    <label class="form-label" for="admin-status">
+                      Status
+                    </label>
+                    <select id="admin-status" class="input">
+                      <option value="booked">Booked</option>
+                      <option value="in-transit">In transit</option>
+                      <option value="out-for-delivery">Out for delivery</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-actions">
+                  <button class="btn btn-primary" type="submit">
+                    Add shipment
+                  </button>
+                </div>
+              </form>
+              <div class="table-wrapper" style="margin-top:1rem;">
+                <table class="table" id="admin-table-shipments">
+                  <thead>
+                    <tr>
+                      <th>Tracking ID</th>
+                      <th>From</th>
+                      <th>To</th>
+                      <th>Status</th>
+                      <th>Agent</th>
+                    </tr>
+                  </thead>
+                  <tbody></tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="dashboard-panel" data-admin-panel="prices">
+              <h2 style="margin-top:0;">Manage prices</h2>
+              <p style="font-size:0.9rem;color:var(--color-text-muted);">
+                Adjust base price multipliers used by the shipping calculator.
+              </p>
+              <form class="form" id="admin-price-form">
+                <div class="form-row">
+                  <div class="form-field">
+                    <label class="form-label" for="mult-city">
+                      Within city
+                    </label>
+                    <input
+                      id="mult-city"
+                      class="input"
+                      type="number"
+                      step="0.1"
+                    />
+                  </div>
+                  <div class="form-field">
+                    <label class="form-label" for="mult-regional">
+                      Regional
+                    </label>
+                    <input
+                      id="mult-regional"
+                      class="input"
+                      type="number"
+                      step="0.1"
+                    />
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-field">
+                    <label class="form-label" for="mult-national">
+                      National
+                    </label>
+                    <input
+                      id="mult-national"
+                      class="input"
+                      type="number"
+                      step="0.1"
+                    />
+                  </div>
+                  <div class="form-field">
+                    <label class="form-label" for="mult-international">
+                      International
+                    </label>
+                    <input
+                      id="mult-international"
+                      class="input"
+                      type="number"
+                      step="0.1"
+                    />
+                  </div>
+                </div>
+                <div class="form-actions">
+                  <button class="btn btn-primary" type="submit">
+                    Save multipliers
+                  </button>
+                </div>
+              </form>
+            </div>
+
+            <div class="dashboard-panel" data-admin-panel="destinations">
+              <h2 style="margin-top:0;">Manage destinations</h2>
+              <form class="form" id="admin-dest-form">
+                <div class="form-row">
+                  <div class="form-field">
+                    <label class="form-label" for="dest-name">City/region</label>
+                    <input id="dest-name" class="input" type="text" />
+                  </div>
+                  <div class="form-field">
+                    <label class="form-label" for="dest-country">
+                      Country
+                    </label>
+                    <input id="dest-country" class="input" type="text" />
+                  </div>
+                </div>
+                <div class="form-actions">
+                  <button class="btn btn-primary" type="submit">
+                    Add destination
+                  </button>
+                </div>
+              </form>
+              <div class="table-wrapper" style="margin-top:1rem;">
+                <table class="table" id="admin-table-destinations">
+                  <thead>
+                    <tr>
+                      <th>City/region</th>
+                      <th>Country</th>
+                    </tr>
+                  </thead>
+                  <tbody></tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="dashboard-panel" data-admin-panel="agents">
+              <h2 style="margin-top:0;">Manage agents</h2>
+              <form class="form" id="admin-agent-form">
+                <div class="form-row">
+                  <div class="form-field">
+                    <label class="form-label" for="agent-name">
+                      Agent name
+                    </label>
+                    <input id="agent-name" class="input" type="text" />
+                  </div>
+                  <div class="form-field">
+                    <label class="form-label" for="agent-region">
+                      Region
+                    </label>
+                    <input id="agent-region" class="input" type="text" />
+                  </div>
+                </div>
+                <div class="form-actions">
+                  <button class="btn btn-primary" type="submit">
+                    Add agent
+                  </button>
+                </div>
+              </form>
+              <div class="table-wrapper" style="margin-top:1rem;">
+                <table class="table" id="admin-table-agents">
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Region</th>
+                    </tr>
+                  </thead>
+                  <tbody></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-column">
+          <a href="index.html#home" class="logo footer-logo">
+            <span class="logo-mark">🚚</span>
+            <span class="logo-text">SwiftShip</span>
+          </a>
+          <p class="footer-text">
+            Internal tools for managing shipments, agents, and destinations.
+          </p>
+        </div>
+        <div class="footer-column">
+          <h3 class="footer-heading">Admin</h3>
+          <ul class="footer-links">
+            <li><a href="#top">Shipments</a></li>
+            <li><a href="#top">Prices</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3 class="footer-heading">Links</h3>
+          <ul class="footer-links">
+            <li><a href="dashboard.html">Customer dashboard</a></li>
+            <li><a href="agent.html">Agent portal</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3 class="footer-heading">Legal</h3>
+          <ul class="footer-links">
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Privacy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container footer-bottom-inner">
+          <p>&copy; <span id="year"></span> SwiftShip Logistics.</p>
+          <button
+            type="button"
+            class="btn-theme-toggle"
+            aria-label="Toggle dark mode"
+          >
+            Toggle theme
+          </button>
+        </div>
+      </div>
+    </footer>
+
+    <div class="toast-stack" aria-live="polite" aria-atomic="true"></div>
+    <script src="scripts.js"></script>
+  </body>
+  </html>
+
+

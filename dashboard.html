@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customer Dashboard – SwiftShip</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🚚%3C/text%3E%3C/svg%3E" />
+    <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🚚%3C/text%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="responsive.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="index.html#home" class="logo" aria-label="SwiftShip home">
+          <span class="logo-mark">🚚</span>
+          <span class="logo-text">SwiftShip</span>
+        </a>
+
+        <button
+          class="nav-toggle"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+        >
+          <span class="nav-toggle-line"></span>
+          <span class="nav-toggle-line"></span>
+          <span class="nav-toggle-line"></span>
+        </button>
+
+        <nav class="site-nav" aria-label="Primary navigation">
+          <ul class="nav-list">
+            <li><a href="index.html#home">Home</a></li>
+           
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="admin.html">Admin</a></li>
+            <li><a href="agent.html">Agent</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="section">
+      <div class="container dashboard-layout">
+        <aside class="dashboard-sidebar">
+          <h1 style="font-size:1.35rem;margin:0 0 0.6rem;">Customer dashboard</h1>
+          <button
+            class="dashboard-nav-btn is-active"
+            data-dashboard-tab="shipments"
+          >
+            My shipments
+          </button>
+          <button class="dashboard-nav-btn" data-dashboard-tab="addresses">
+            My addresses
+          </button>
+          <button class="dashboard-nav-btn" data-dashboard-tab="payments">
+            Payment history
+          </button>
+          <button class="dashboard-nav-btn" data-dashboard-tab="bookings">
+            Saved pickups
+          </button>
+          <button class="dashboard-nav-btn" data-dashboard-tab="profile">
+            Profile settings
+          </button>
+        </aside>
+
+        <section class="dashboard-main">
+          <div class="stat-row">
+            <div class="stat-card">
+              <div class="stat-label">Active shipments</div>
+              <div class="stat-value" id="dash-active-shipments">0</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label">Delivered (30 days)</div>
+              <div class="stat-value" id="dash-delivered">0</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label">Saved addresses</div>
+              <div class="stat-value" id="dash-addresses">0</div>
+            </div>
+          </div>
+
+          <div class="dashboard-panels">
+            <div
+              class="dashboard-panel is-active"
+              data-dashboard-panel="shipments"
+            >
+              <h2 style="margin-top:0;">My shipments</h2>
+              <div class="table-wrapper">
+                <table class="table" id="table-shipments">
+                  <thead>
+                    <tr>
+                      <th>Tracking ID</th>
+                      <th>From</th>
+                      <th>To</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody></tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="dashboard-panel" data-dashboard-panel="addresses">
+              <h2 style="margin-top:0;">My addresses</h2>
+              <div class="table-wrapper">
+                <table class="table" id="table-addresses">
+                  <thead>
+                    <tr>
+                      <th>Label</th>
+                      <th>Address</th>
+                      <th>City</th>
+                      <th>Type</th>
+                    </tr>
+                  </thead>
+                  <tbody></tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="dashboard-panel" data-dashboard-panel="payments">
+              <h2 style="margin-top:0;">Payment history</h2>
+              <div class="table-wrapper">
+                <table class="table" id="table-payments">
+                  <thead>
+                    <tr>
+                      <th>Date</th>
+                      <th>Description</th>
+                      <th>Amount</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody></tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="dashboard-panel" data-dashboard-panel="bookings">
+              <h2 style="margin-top:0;">Saved pickups</h2>
+              <p style="font-size:0.9rem;color:var(--color-text-muted);">
+                These are recently saved or repeated pickup requests on this
+                device.
+              </p>
+              <div class="table-wrapper">
+                <table class="table" id="table-bookings">
+                  <thead>
+                    <tr>
+                      <th>Pickup</th>
+                      <th>Drop</th>
+                      <th>Weight</th>
+                      <th>Type</th>
+                    </tr>
+                  </thead>
+                  <tbody></tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="dashboard-panel" data-dashboard-panel="profile">
+              <h2 style="margin-top:0;">Profile settings</h2>
+              <form class="form" id="profile-form">
+                <div class="form-field">
+                  <label for="profile-name" class="form-label">Full name</label>
+                  <input id="profile-name" class="input" type="text" />
+                </div>
+                <div class="form-field">
+                  <label for="profile-email" class="form-label">Email</label>
+                  <input id="profile-email" class="input" type="email" />
+                </div>
+                <div class="form-field">
+                  <label for="profile-phone" class="form-label">Phone</label>
+                  <input id="profile-phone" class="input" type="tel" />
+                </div>
+                <div class="form-actions">
+                  <button type="submit" class="btn btn-primary">
+                    Save profile
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-column">
+          <a href="index.html#home" class="logo footer-logo">
+            <span class="logo-mark">🚚</span>
+            <span class="logo-text">SwiftShip</span>
+          </a>
+          <p class="footer-text">
+            Access your shipments, addresses, and billing information in one
+            place.
+          </p>
+        </div>
+        <div class="footer-column">
+          <h3 class="footer-heading">Dashboard</h3>
+          <ul class="footer-links">
+            <li><a href="#top">Overview</a></li>
+            <li><a href="#top">Shipments</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3 class="footer-heading">Back to site</h3>
+          <ul class="footer-links">
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="index.html#contact">Support</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3 class="footer-heading">Legal</h3>
+          <ul class="footer-links">
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Privacy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container footer-bottom-inner">
+          <p>&copy; <span id="year"></span> SwiftShip Logistics.</p>
+          <button
+            type="button"
+            class="btn-theme-toggle"
+            aria-label="Toggle dark mode"
+          >
+            Toggle theme
+          </button>
+        </div>
+      </div>
+    </footer>
+
+    <div class="toast-stack" aria-live="polite" aria-atomic="true"></div>
+    <script src="scripts.js"></script>
+  </body>
+  </html>
+
+

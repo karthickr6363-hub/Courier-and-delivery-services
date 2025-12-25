@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delivery Agent – SwiftShip</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🚚%3C/text%3E%3C/svg%3E" />
+    <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🚚%3C/text%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="responsive.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="index.html#home" class="logo" aria-label="SwiftShip home">
+          <span class="logo-mark">🚚</span>
+          <span class="logo-text">SwiftShip</span>
+        </a>
+
+        <button
+          class="nav-toggle"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+        >
+          <span class="nav-toggle-line"></span>
+          <span class="nav-toggle-line"></span>
+          <span class="nav-toggle-line"></span>
+        </button>
+
+        <nav class="site-nav" aria-label="Primary navigation">
+          <ul class="nav-list">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="admin.html">Admin</a></li>
+            <li><a href="agent.html">Agent</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="section">
+      <div class="container dashboard-layout">
+        <aside class="dashboard-sidebar">
+          <h1 style="font-size:1.35rem;margin:0 0 0.6rem;">Agent console</h1>
+          <button
+            class="dashboard-nav-btn is-active"
+            data-agent-tab="assigned"
+          >
+            Assigned packages
+          </button>
+          <button class="dashboard-nav-btn" data-agent-tab="map">
+            Map preview
+          </button>
+        </aside>
+
+        <section class="dashboard-main">
+          <div class="stat-row">
+            <div class="stat-card">
+              <div class="stat-label">Today&apos;s pickups</div>
+              <div class="stat-value" id="agent-pickups">0</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label">Out for delivery</div>
+              <div class="stat-value" id="agent-out">0</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label">Delivered</div>
+              <div class="stat-value" id="agent-delivered">0</div>
+            </div>
+          </div>
+
+          <div class="dashboard-panels">
+            <div
+              class="dashboard-panel is-active"
+              data-agent-panel="assigned"
+            >
+              <h2 style="margin-top:0;">Assigned packages</h2>
+              <div class="table-wrapper">
+                <table class="table" id="agent-table-shipments">
+                  <thead>
+                    <tr>
+                      <th>Tracking ID</th>
+                      <th>Pickup</th>
+                      <th>Drop</th>
+                      <th>Status</th>
+                      <th>Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody></tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="dashboard-panel" data-agent-panel="map">
+              <h2 style="margin-top:0;">Map preview</h2>
+              <p style="font-size:0.9rem;color:var(--color-text-muted);">
+                This is a static preview. In a production app, this would be an
+                embedded map (Google Maps, Mapbox, etc.).
+              </p>
+              <div
+                style="
+                  border-radius: 16px;
+                  border: 1px solid var(--color-border-subtle);
+                  height: 260px;
+                  background: linear-gradient(135deg, #1d4ed8, #22c55e);
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  color: white;
+                  font-weight: 600;
+                "
+              >
+                Map preview
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-column">
+          <a href="index.html#home" class="logo footer-logo">
+            <span class="logo-mark">🚚</span>
+            <span class="logo-text">SwiftShip</span>
+          </a>
+          <p class="footer-text">
+            Tools for delivery partners to manage pickups and deliveries.
+          </p>
+        </div>
+        <div class="footer-column">
+          <h3 class="footer-heading">Agent</h3>
+          <ul class="footer-links">
+            <li><a href="#top">Assigned packages</a></li>
+            <li><a href="#top">Map preview</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3 class="footer-heading">Links</h3>
+          <ul class="footer-links">
+            <li><a href="dashboard.html">Customer dashboard</a></li>
+            <li><a href="admin.html">Admin panel</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3 class="footer-heading">Legal</h3>
+          <ul class="footer-links">
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Privacy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container footer-bottom-inner">
+          <p>&copy; <span id="year"></span> SwiftShip Logistics.</p>
+          <button
+            type="button"
+            class="btn-theme-toggle"
+            aria-label="Toggle dark mode"
+          >
+            Toggle theme
+          </button>
+        </div>
+      </div>
+    </footer>
+
+    <div class="toast-stack" aria-live="polite" aria-atomic="true"></div>
+    <script src="scripts.js"></script>
+  </body>
+  </html>
+
+

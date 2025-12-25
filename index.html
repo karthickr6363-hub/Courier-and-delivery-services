@@ -1,0 +1,1413 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SwiftShip Courier & Delivery Services</title>
+    <meta
+      name="description"
+      content="SwiftShip - Professional courier and delivery services for domestic and international shipments, with real-time tracking and easy pickup booking."
+    />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🚚%3C/text%3E%3C/svg%3E" />
+    <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🚚%3C/text%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="responsive.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="#home" class="logo" aria-label="SwiftShip home">
+          <span class="logo-mark">🚚</span>
+          <span class="logo-text">SwiftShip</span>
+        </a>
+
+        <button
+          class="nav-toggle"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+        >
+          <span class="nav-toggle-line"></span>
+          <span class="nav-toggle-line"></span>
+          <span class="nav-toggle-line"></span>
+        </button>
+
+        <nav class="site-nav" aria-label="Primary navigation">
+          <ul class="nav-list">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#tracking">Track Shipment</a></li>
+            <li><a href="#book-pickup">Book Pickup</a></li>
+            <li><a href="#pricing">Price Estimator</a></li>
+            <li><a href="#services">Services</a></li>
+            <li class="nav-dropdown">
+              <a href="#" class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+                Account
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 4px; transition: transform 0.2s;">
+                  <path d="M3 4.5L6 7.5L9 4.5"/>
+                </svg>
+              </a>
+              <ul class="nav-dropdown-menu">
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="admin.html">Admin</a></li>
+                <li><a href="agent.html">Agent</a></li>
+              </ul>
+            </li>
+            <li><a href="#contact">Contact</a></li>
+            <li>
+              <button class="btn btn-sm btn-outline" data-open-auth="login">
+                Login
+              </button>
+            </li>
+            <li>
+              <button class="btn btn-sm btn-primary" data-open-auth="signup">
+                Sign up
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero / Home -->
+      <section class="section hero" id="home">
+        <div class="container hero-grid">
+          <div class="hero-content">
+
+            <p class="eyebrow">Courier & Delivery Services</p>
+
+            <h1>Delivering parcels fast, secure, and on time.</h1>
+
+            <p class="hero-subtitle">
+              Book pickups, track shipments in real-time, and get instant price
+              estimates with our all-in-one delivery platform with your assigned delivery agent details and location sharing via live tracking map for seamless delivery experience for faster and reliable delivery .
+            </p>
+            <div class="hero-actions">
+              <button class="btn btn-primary" data-scroll-target="#book-pickup">
+                Book a Pickup
+              </button>
+              <button class="btn btn-ghost" data-scroll-target="#tracking">
+                Track a Shipment
+              </button>
+            </div>
+            <div class="hero-highlights">
+              <div class="hero-highlight">
+                <span class="badge">24/7</span>
+                <span>Live tracking</span>
+              </div>
+              <div class="hero-highlight">
+                <span class="badge">150+</span>
+                <span>Countries covered</span>
+              </div>
+              <div class="hero-highlight">
+                <span class="badge">4.9★</span>
+                <span>Customer rating</span>
+              </div>
+              <div class="hero-highlight">
+                <span class="badge">100%</span>
+                <span>On-time delivery</span>
+              </div>
+              <div class="hero-highlight">
+                <span class="badge">5K+</span>
+                <span>Delivery partners</span>
+              </div>
+              <div class="hero-highlight">
+                <span class="badge">120+</span>
+                <span>Cities served</span>
+              </div>
+              <div class="hero-highlight">
+                <span class="badge">24hr</span>
+                <span>Support available</span>
+              </div>
+              <div class="hero-highlight">
+                <span class="badge">99%</span>
+                <span>Success rate</span>
+              </div>
+              <div class="hero-highlight">
+                <span class="badge">Same-day</span>
+                <span>Delivery option</span>
+              </div>
+            </div>
+          </div>
+          <div class="hero-media">
+            <figure class="hero-image-wrapper">
+              <img
+                src="https://images.pexels.com/photos/6169054/pexels-photo-6169054.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                alt="Courier delivering a package to a customer"
+                class="hero-image"
+                loading="lazy"
+              />
+            </figure>
+            <div class="hero-stats-card equal-card">
+              <div class="hero-stats-grid">
+                <div class="hero-stats-block">
+                  <p class="hero-stats-title">Today's deliveries</p>
+                  <p class="hero-stats-number">1,284</p>
+                  <p class="hero-stats-meta">98% on-time rate</p>
+                  <div class="hero-stats-metrics">
+                    
+                  </div>
+                </div>
+                <div class="hero-stats-block">
+                  <p class="hero-stats-title">Network overview</p>
+                  <p class="hero-stats-number">64</p>
+                  <p class="hero-stats-meta">Active delivery routes today</p>
+                  <div class="hero-stats-metrics">
+                   
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tracking Module -->
+      <section class="section section-alt" id="tracking">
+        <div class="container two-column">
+          <div class="tracking-visual">
+            <div class="section-header section-header-center">
+              <h2>Track your shipment</h2>
+              <p>
+                Enter your tracking ID to see live progress from pickup to
+                delivery.
+              </p>
+            </div>
+            <figure aria-hidden="true">
+              <img
+                src="https://images.pexels.com/photos/6169052/pexels-photo-6169052.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                alt="Illustration of a parcel moving through delivery checkpoints"
+                loading="lazy"
+              />
+            </figure>
+          </div>
+          <div class="tracking-card equal-card">
+            <form id="tracking-form" class="form">
+              <label for="tracking-id" class="form-label">
+                Tracking ID
+              </label>
+              <div class="input-group">
+                <input
+                  id="tracking-id"
+                  name="trackingId"
+                  type="text"
+                  inputmode="numeric"
+                  autocomplete="off"
+                  class="input"
+                  placeholder="e.g. SS-9042381"
+                  required
+                  aria-describedby="tracking-help"
+                />
+                <button type="submit" class="btn btn-primary">
+                  Track
+                </button>
+              </div>
+              <p id="tracking-help" class="form-help">
+                Use the ID from your booking confirmation email.
+              </p>
+            </form>
+
+            <div
+              id="tracking-result"
+              class="tracking-result"
+              aria-live="polite"
+            >
+              <div class="tracking-timeline">
+                <div class="timeline-step" data-step="booked">
+                  <span class="timeline-badge"></span>
+                  <span class="timeline-label">Booked</span>
+                </div>
+                <div class="timeline-step" data-step="in-transit">
+                  <span class="timeline-badge"></span>
+                  <span class="timeline-label">In Transit</span>
+                </div>
+                <div class="timeline-step" data-step="out-for-delivery">
+                  <span class="timeline-badge"></span>
+                  <span class="timeline-label">Out for Delivery</span>
+                </div>
+                <div class="timeline-step" data-step="delivered">
+                  <span class="timeline-badge"></span>
+                  <span class="timeline-label">Delivered</span>
+                </div>
+              </div>
+              <div class="tracking-meta">
+                <p class="tracking-status-label">Status:</p>
+                <p id="tracking-status" class="tracking-status-value">
+                  Enter a valid tracking ID.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Home Highlights / Services Summary -->
+      <section class="section" id="highlights">
+        <div class="container">
+          <header class="section-header section-header-center">
+            <h2>Why ship with SwiftShip?</h2>
+            <p>
+              A modern delivery network built for individuals, e‑commerce, and
+              enterprises.
+            </p>
+          </header>
+          <div class="grid grid-3">
+            <article class="card equal-card">
+              <h3>Fast delivery</h3>
+              <p>
+                Same‑day and next‑day options in major cities, with guaranteed
+                cut‑off times.
+              </p>
+              <ul class="list">
+                <li>Optimized delivery routes</li>
+                <li>Real‑time ETA updates</li>
+                <li>Priority handling available</li>
+              </ul>
+            </article>
+            <article class="card equal-card">
+              <h3>Secure handling</h3>
+              <p>
+                Tamper‑evident packaging, verified couriers, and end‑to‑end
+                tracking.
+              </p>
+              <ul class="list">
+                <li>Digital proof of delivery</li>
+                <li>Photo and signature capture</li>
+                <li>Insurance options</li>
+              </ul>
+            </article>
+            <article class="card equal-card">
+              <h3>Transparent pricing</h3>
+              <p>
+                No hidden fees. Get instant all‑inclusive estimates before you
+                ship.
+              </p>
+              <ul class="list">
+                <li>Weight‑ and distance‑based</li>
+                <li>Bulk and business rates</li>
+                <li>Volume discounts</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Popular destinations -->
+      <section class="section section-alt" id="destinations">
+        <div class="container">
+          <header class="section-header section-header-center">
+            <h2>Popular shipping destinations</h2>
+            <p>
+              Reach customers across key domestic and international hubs.
+            </p>
+          </header>
+          <div class="grid grid-4">
+            <article class="card destination-card equal-card">
+              <h3>Domestic Metro</h3>
+              <p>Same‑day and next‑day delivery in all major cities.</p>
+            </article>
+            <article class="card destination-card equal-card">
+              <h3>Regional</h3>
+              <p>Fast, reliable ground network for regional deliveries.</p>
+            </article>
+            <article class="card destination-card equal-card">
+              <h3>International Express</h3>
+              <p>Priority air freight to 150+ countries.</p>
+            </article>
+            <article class="card destination-card equal-card">
+              <h3>Cross‑border E‑commerce</h3>
+              <p>Optimized lanes for online sellers and marketplaces.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Book Pickup Module -->
+      <section class="section" id="book-pickup">
+        <div class="container two-column">
+          <div class="pickup-visual">
+            <div class="section-header section-header-center">
+              <h2>Book a pickup</h2>
+              <p>
+                Schedule a courier to your doorstep in a few clicks. No phone
+                calls needed with your assigned delivery agent details and location sharing via live tracking map for seamless delivery experience for faster and reliable delivery .
+              </p>
+            </div>
+            <figure aria-hidden="true">
+              <img
+                src="https://images.pexels.com/photos/4484078/pexels-photo-4484078.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                alt="Courier picking up packages from a customer"
+                loading="lazy"
+              />
+            </figure>
+          </div>
+          <div class="card equal-card">
+            <form id="pickup-form" class="form">
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="pickup-address" class="form-label">
+                    Pickup address
+                  </label>
+                  <input
+                    id="pickup-address"
+                    name="pickupAddress"
+                    class="input"
+                    type="text"
+                    required
+                  />
+                </div>
+                <div class="form-field">
+                  <label for="drop-address" class="form-label">
+                    Drop address
+                  </label>
+                  <input
+                    id="drop-address"
+                    name="dropAddress"
+                    class="input"
+                    type="text"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="package-weight" class="form-label">
+                    Package weight (kg)
+                  </label>
+                  <input
+                    id="package-weight"
+                    name="weight"
+                    class="input"
+                    type="number"
+                    min="0.1"
+                    step="0.1"
+                    required
+                  />
+                </div>
+                <div class="form-field">
+                  <label for="package-size" class="form-label">
+                    Package size
+                  </label>
+                  <select
+                    id="package-size"
+                    name="size"
+                    class="input"
+                    required
+                  >
+                    <option value="">Select size</option>
+                    <option value="small">Small (up to 30cm)</option>
+                    <option value="medium">Medium (30–60cm)</option>
+                    <option value="large">Large (&gt;60cm)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="delivery-type" class="form-label">
+                    Delivery type
+                  </label>
+                  <select
+                    id="delivery-type"
+                    name="deliveryType"
+                    class="input"
+                    required
+                  >
+                    <option value="">Choose option</option>
+                    <option value="standard">Standard</option>
+                    <option value="express">Express</option>
+                    <option value="same-day">Same‑day (selected cities)</option>
+                  </select>
+                </div>
+                <div class="form-field">
+                  <label for="pickup-datetime" class="form-label">
+                    Date &amp; time
+                  </label>
+                  <input
+                    id="pickup-datetime"
+                    name="pickupDateTime"
+                    class="input"
+                    type="datetime-local"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="form-actions">
+                <button type="submit" class="btn btn-primary">
+                  Confirm booking
+                </button>
+              </div>
+            </form>
+
+            <div
+              id="booking-confirmation"
+              class="booking-confirmation"
+              aria-live="polite"
+            ></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Price Estimation Module -->
+      <section class="section section-alt" id="pricing">
+        <div class="container two-column">
+          <div class="pricing-visual">
+            <div class="section-header section-header-center">
+              <h2>Shipping price estimator</h2>
+              <p>
+                Get an instant estimate based on weight, distance, and delivery
+                speed with your assigned delivery agent details and location sharing via live tracking map for seamless delivery experience for faster and reliable delivery .
+              </p>
+            </div>
+            <figure aria-hidden="true">
+              <img
+                src="https://images.pexels.com/photos/7857567/pexels-photo-7857567.jpeg"
+                alt="Delivery planner reviewing shipping costs on a laptop"
+                loading="lazy"
+              />
+            </figure>
+          </div>
+          <div class="card equal-card">
+            <form id="price-form" class="form">
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="estimate-weight" class="form-label">
+                    Weight (kg)
+                  </label>
+                  <input
+                    id="estimate-weight"
+                    name="estimateWeight"
+                    class="input"
+                    type="number"
+                    min="0.1"
+                    step="0.1"
+                    required
+                  />
+                </div>
+                <div class="form-field">
+                  <label for="distance" class="form-label">
+                    Distance
+                  </label>
+                  <select
+                    id="distance"
+                    name="distance"
+                    class="input"
+                    required
+                  >
+                    <option value="">Select</option>
+                    <option value="city">Within city (&lt;25km)</option>
+                    <option value="regional">Regional (25–250km)</option>
+                    <option value="national">National (&gt;250km)</option>
+                    <option value="international">
+                      International (global)
+                    </option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="speed" class="form-label">
+                    Delivery speed
+                  </label>
+                  <select id="speed" name="speed" class="input" required>
+                    <option value="">Choose</option>
+                    <option value="standard">Standard (2–5 days)</option>
+                    <option value="express">Express (1–2 days)</option>
+                    <option value="same-day">Same‑day (selected cities)</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-actions">
+                <button type="submit" class="btn btn-primary">
+                  Calculate price
+                </button>
+              </div>
+            </form>
+
+            <div id="price-result" class="price-result" aria-live="polite">
+              <p class="price-label">Estimated price</p>
+              <p class="price-value">—</p>
+              <p class="price-note">
+                Final price may vary based on exact route and package details.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Module (summary) -->
+      <section class="section" id="services">
+        <div class="container">
+          <header class="section-header section-header-center">
+            <h2>Courier services for every need</h2>
+            <p>
+              From domestic parcels to global logistics, SwiftShip adapts to how
+              you ship.
+            </p>
+          </header>
+          <div class="grid grid-3">
+            <article class="card service-card equal-card">
+              <h3>Domestic courier</h3>
+              <p>
+                Reliable door‑to‑door deliveries within the country with
+                real‑time tracking.
+              </p>
+              <ul class="list">
+                <li>Same‑day / next‑day in metros</li>
+                <li>Cash‑on‑delivery options</li>
+                <li>Reverse logistics</li>
+              </ul>
+            </article>
+            <article class="card service-card equal-card">
+              <h3>International courier</h3>
+              <p>
+                Express and economy options for documents, parcels, and
+                freight.
+              </p>
+              <ul class="list">
+                <li>Customs support</li>
+                <li>Duty and tax handling</li>
+                <li>End‑to‑end visibility</li>
+              </ul>
+            </article>
+            <article class="card service-card equal-card">
+              <h3>Same‑day delivery</h3>
+              <p>
+                Ultra‑fast intra‑city deliveries with live courier location
+                sharing.
+              </p>
+              <ul class="list">
+                <li>On‑demand pickup</li>
+                <li>Time‑slot deliveries</li>
+                <li>Dedicated riders</li>
+              </ul>
+            </article>
+            <article class="card service-card equal-card">
+              <h3>Bulk logistics</h3>
+              <p>
+                Line‑haul and hub‑and‑spoke operations for large shipment
+                volumes.
+              </p>
+              <ul class="list">
+                <li>Route optimization</li>
+                <li>Warehouse cross‑docking</li>
+                <li>Dedicated fleets</li>
+              </ul>
+            </article>
+            <article class="card service-card equal-card">
+              <h3>Warehouse &amp; inventory</h3>
+              <p>
+                Storage, fulfillment, and inventory management for growing
+                brands.
+              </p>
+              <ul class="list">
+                <li>Multi‑location warehousing</li>
+                <li>Pick, pack, and ship</li>
+                <li>Stock visibility</li>
+              </ul>
+            </article>
+            <article class="card service-card equal-card">
+              <h3>E‑commerce &amp; business</h3>
+              <p>
+                Plug‑and‑play delivery for online stores and enterprise
+                shipments.
+              </p>
+              <ul class="list">
+                <li>Marketplace integrations</li>
+                <li>Bulk upload &amp; APIs</li>
+                <li>Dedicated account managers</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials & Partners -->
+      <section class="section section-alt" id="testimonials">
+        <div class="container">
+          <div class="two-column align-start">
+            <div>
+              <header class="section-header section-header-center">
+                <h2>Trusted by businesses of all sizes</h2>
+                <p>
+                  See what our customers say about shipping with SwiftShip.
+                </p>
+              </header>
+              <div class="testimonial-slider equal-card" aria-live="polite">
+                <div class="testimonial-slide">
+                  <p class="testimonial-text">
+                    “SwiftShip transformed our e‑commerce deliveries. Our
+                    on‑time rate jumped to 99%.”
+                  </p>
+                  <div class="testimonial-meta">
+                    <div class="testimonial-avatar">
+                      <img
+                        src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=200"
+                        alt="Portrait of Aakash Mehra"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div class="testimonial-person">
+                      <span class="testimonial-name">Aakash Mehra</span>
+                      <span class="testimonial-role">
+                        COO, UrbanThreads
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="testimonial-slide">
+                  <p class="testimonial-text">
+                    “The live tracking and proactive notifications have reduced
+                    support calls dramatically.”
+                  </p>
+                  <div class="testimonial-meta">
+                    <div class="testimonial-avatar">
+                      <img
+                        src="https://images.pexels.com/photos/3760852/pexels-photo-3760852.jpeg?auto=compress&cs=tinysrgb&w=200"
+                        alt="Portrait of Lena Ortiz"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div class="testimonial-person">
+                      <span class="testimonial-name">Lena Ortiz</span>
+                      <span class="testimonial-role">
+                        Operations Lead, ShopSquare
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="testimonial-slide">
+                  <p class="testimonial-text">
+                    “Their same‑day service helps us keep urgent B2B deliveries
+                    under tight SLAs.”
+                  </p>
+                  <div class="testimonial-meta">
+                    <div class="testimonial-avatar">
+                      <img
+                        src="https://images.pexels.com/photos/927022/pexels-photo-927022.jpeg?auto=compress&cs=tinysrgb&w=200"
+                        alt="Portrait of David Kim"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div class="testimonial-person">
+                      <span class="testimonial-name">David Kim</span>
+                      <span class="testimonial-role">
+                        Logistics Manager, MedSupply
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="testimonial-controls">
+                <button
+                  class="icon-button"
+                  type="button"
+                  aria-label="Previous testimonial"
+                  data-testimonial-prev
+                >
+                  ‹
+                </button>
+                <div class="testimonial-dots" role="tablist"></div>
+                <button
+                  class="icon-button"
+                  type="button"
+                  aria-label="Next testimonial"
+                  data-testimonial-next
+                >
+                  ›
+                </button>
+              </div>
+            </div>
+            <div class="partners">
+              <p class="partners-label">Partnered with</p>
+              <div class="partner-logos">
+                <div class="partner-logo">
+                  <img
+                    src="https://placehold.co/120x40/95A3B8/FFFFFF?text=Shopify"
+                    alt="Shopify logo"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="partner-logo">
+                  <img
+                    src="https://placehold.co/120x40/95A3B8/FFFFFF?text=WooCommerce"
+                    alt="WooCommerce logo"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="partner-logo">
+                  <img
+                    src="https://placehold.co/120x40/95A3B8/FFFFFF?text=Amazon"
+                    alt="Amazon logo"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="partner-logo">
+                  <img
+                    src="https://placehold.co/120x40/95A3B8/FFFFFF?text=eBay"
+                    alt="eBay logo"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="partner-logo">
+                  <img
+                    src="https://placehold.co/120x40/95A3B8/FFFFFF?text=Flipkart"
+                    alt="Flipkart logo"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="partner-logo">
+                  <img
+                    src="https://placehold.co/120x40/95A3B8/FFFFFF?text=Etsy"
+                    alt="Etsy logo"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="partner-logo">
+                  <img
+                    src="https://placehold.co/120x40/95A3B8/FFFFFF?text=Walmart"
+                    alt="Walmart logo"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="partner-logo">
+                  <img
+                    src="https://placehold.co/120x40/95A3B8/FFFFFF?text=BigCommerce"
+                    alt="BigCommerce logo"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="partner-logo">
+                  <img
+                    src="https://placehold.co/120x40/95A3B8/FFFFFF?text=Magento"
+                    alt="Magento logo"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="partner-logo">
+                  <img
+                    src="https://placehold.co/120x40/95A3B8/FFFFFF?text=AliExpress"
+                    alt="AliExpress logo"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="partner-logo">
+                  <img
+                    src="https://placehold.co/120x40/95A3B8/FFFFFF?text=PrestaShop"
+                    alt="PrestaShop logo"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="partner-logo">
+                  <img
+                    src="https://placehold.co/120x40/95A3B8/FFFFFF?text=Squarespace"
+                    alt="Squarespace logo"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="partner-logo">
+                  <img
+                    src="https://placehold.co/120x40/95A3B8/FFFFFF?text=OpenCart"
+                    alt="OpenCart logo"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="partner-logo">
+                  <img
+                    src="https://placehold.co/120x40/95A3B8/FFFFFF?text=Wix"
+                    alt="Wix logo"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="partner-logo">
+                  <img
+                    src="https://placehold.co/120x40/95A3B8/FFFFFF?text=Square"
+                    alt="Square logo"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="partner-logo">
+                  <img
+                    src="https://placehold.co/120x40/95A3B8/FFFFFF?text=Ecwid"
+                    alt="Ecwid logo"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ & Help -->
+      <section class="section" id="faq">
+        <div class="container">
+          <header class="section-header section-header-center">
+            <h2>FAQ &amp; help center</h2>
+            <p>Find quick answers or search our knowledge base.</p>
+            <div class="faq-search-wrapper">
+              <input
+                id="faq-search"
+                type="search"
+                class="input"
+                placeholder="Search FAQs..."
+                aria-label="Search FAQs"
+              />
+            </div>
+          </header>
+          <div class="faq-layout">
+            <div class="faq-accordion" id="faq-list">
+              <article class="faq-item" data-faq>
+                <button
+                  class="faq-question"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  <span>How do I schedule a pickup?</span>
+                  <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                  <p>
+                    Use the “Book a pickup” section above, fill in your pickup
+                    and drop details, choose a time, and confirm your booking.
+                  </p>
+                </div>
+              </article>
+              <article class="faq-item" data-faq>
+                <button
+                  class="faq-question"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  <span>What items are restricted from shipping?</span>
+                  <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                  <p>
+                    Hazardous materials, illegal items, and certain high‑value
+                    goods may be restricted. Please refer to our full restricted
+                    items list in the terms.
+                  </p>
+                </div>
+              </article>
+              <article class="faq-item" data-faq>
+                <button
+                  class="faq-question"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  <span>Can I change my delivery address after booking?</span>
+                  <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                  <p>
+                    Address changes are possible before the parcel is out for
+                    delivery. Contact support with your tracking ID.
+                  </p>
+                </div>
+              </article>
+              <article class="faq-item" data-faq>
+                <button
+                  class="faq-question"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  <span>Do you support cash‑on‑delivery (COD)?</span>
+                  <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                  <p>
+                    Yes, COD is available for eligible pin codes and services.
+                    Limits and fees may apply.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact & About -->
+      <section class="section section-alt" id="contact">
+        <div class="container two-column">
+          <div>
+            <div class="card equal-card">
+              <form id="contact-form" class="form">
+                <header class="section-header section-header-center" style="margin-bottom: 2rem;">
+                  <h2>Send us a message</h2>
+                  <p>Fill out the form below and we'll get back to you as soon as possible.</p>
+                </header>
+                <div class="form-field">
+                  <label for="contact-name" class="form-label">Name</label>
+                  <input
+                    id="contact-name"
+                    name="name"
+                    type="text"
+                    class="input"
+                    required
+                  />
+                </div>
+                <div class="form-field">
+                  <label for="contact-email" class="form-label">Email</label>
+                  <input
+                    id="contact-email"
+                    name="email"
+                    type="email"
+                    class="input"
+                    required
+                  />
+                </div>
+                <div class="form-field">
+                  <label for="contact-topic" class="form-label">
+                    Topic
+                  </label>
+                  <select
+                    id="contact-topic"
+                    name="topic"
+                    class="input"
+                    required
+                  >
+                    <option value="">Choose</option>
+                    <option value="support">Shipment support</option>
+                    <option value="sales">Sales / pricing</option>
+                    <option value="enterprise">Enterprise solutions</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+                <div class="form-field">
+                  <label for="contact-message" class="form-label">
+                    Message
+                  </label>
+                  <textarea
+                    id="contact-message"
+                    name="message"
+                    rows="6"
+                    class="input"
+                    required
+                  ></textarea>
+                </div>
+                <div class="form-actions">
+                  <button type="submit" class="btn btn-primary">
+                    Send message
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="contact-info-wrapper">
+            <div class="card contact-info-card">
+              <header class="section-header section-header-center">
+                <h2>Contact &amp; support</h2>
+                <p>
+                  Reach our support team for questions, special requests, or
+                  enterprise solutions.
+                </p>
+              </header>
+              <ul class="contact-list">
+                <li>
+                  <strong>Email:</strong>
+                  <a href="mailto:support@swiftship.com">
+                    support@swiftship.com
+                  </a>
+                </li>
+                <li>
+                  <strong>Phone:</strong>
+                  <a href="tel:+1000123456">+1 (000) 123-456</a>
+                </li>
+                <li>
+                  <strong>Head office:</strong> 12 Logistics Park, City Corner
+                </li>
+                <li>
+                  <strong>Hours:</strong> Mon–Sat, 8:00–20:00
+                </li>
+              </ul>
+              <button
+                class="btn btn-outline"
+                type="button"
+                data-toggle-chat
+                aria-expanded="false"
+              >
+                Open live chat
+              </button>
+            </div>
+            <div class="contact-map" aria-label="SwiftShip head office location">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509374!2d144.95592331531573!3d-37.81720997975181!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sSwiftShip%20Head%20Office!5e0!3m2!1sen!2s!4v1700000000000"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                aria-hidden="false"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="about">
+        <div class="container two-column">
+          <div>
+            <header class="section-header section-header-center">
+              <h2>About SwiftShip</h2>
+            </header>
+            <p>
+              SwiftShip is a technology‑first courier network built to serve
+              modern businesses and everyday shippers. Our mission is to make
+              shipping as simple and predictable as sending a text.
+            </p>
+            <p>
+              With distributed fulfillment centers, optimized routes, and a
+              dedicated operations team, we handle millions of parcels each
+              month across domestic and international lanes.
+            </p>
+            <ul class="list">
+              <li>Operations in 120+ cities</li>
+              <li>150+ international destinations</li>
+              <li>Network of 5,000+ delivery partners</li>
+            </ul>
+          </div>
+          <div class="card equal-card text-center">
+            <h3>Careers &amp; culture</h3>
+            <p>
+              Join a fast‑growing logistics company that values ownership,
+              innovation, and customer obsession.
+            </p>
+            <ul class="list">
+              <li>Open roles in ops, tech, and customer success</li>
+              <li>Hybrid and remote‑friendly teams</li>
+              <li>Learning and development budget</li>
+            </ul>
+            <button type="button" class="btn btn-outline">
+              View open roles
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer" id="footer">
+      <div class="container footer-grid">
+        <div class="footer-column">
+          <a href="#home" class="logo footer-logo">
+            <span class="logo-mark">🚚</span>
+            <span class="logo-text">SwiftShip</span>
+          </a>
+          <p class="footer-text">
+            Smart courier and logistics solutions for individuals, online
+            sellers, and enterprises.
+          </p>
+        </div>
+        <div class="footer-column">
+          <h3 class="footer-heading">Company</h3>
+          <ul class="footer-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#about">Careers</a></li>
+            <li><a href="#services">Services</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3 class="footer-heading">Support</h3>
+          <ul class="footer-links">
+            <li><a href="#faq">Help center</a></li>
+            <li><a href="#contact">Contact us</a></li>
+            <li><a href="#tracking">Track shipment</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3 class="footer-heading">Legal</h3>
+          <ul class="footer-links">
+            <li><a href="#" aria-label="Terms and Conditions">Terms</a></li>
+            <li><a href="#" aria-label="Privacy Policy">Privacy</a></li>
+          </ul>
+          <div class="footer-social">
+            <a href="#" aria-label="Visit our Facebook" target="_blank" rel="noopener noreferrer">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+              </svg>
+            </a>
+            <a href="#" aria-label="Visit our Twitter" target="_blank" rel="noopener noreferrer">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+              </svg>
+            </a>
+            <a href="#" aria-label="Visit our LinkedIn" target="_blank" rel="noopener noreferrer">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+              </svg>
+            </a>
+            <a href="#" aria-label="Visit our Instagram" target="_blank" rel="noopener noreferrer">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container footer-bottom-inner">
+          <p>&copy; <span id="year"></span> SwiftShip Logistics. All rights reserved.</p>
+          <div class="footer-actions">
+            <button
+              type="button"
+              id="scroll-to-top"
+              class="btn-scroll-top"
+              aria-label="Scroll to top"
+              title="Scroll to top"
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 15l-6-6-6 6"/>
+              </svg>
+            </button>
+            <button
+              type="button"
+              class="btn-theme-toggle"
+              aria-label="Toggle dark mode"
+            >
+              Toggle theme
+            </button>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Auth Modal -->
+    <div class="modal" id="auth-modal" aria-hidden="true">
+      <div class="modal-backdrop" data-close-modal></div>
+      <div class="modal-dialog" role="dialog" aria-modal="true">
+        <button
+          class="modal-close icon-button"
+          type="button"
+          aria-label="Close"
+          data-close-modal
+        >
+          ×
+        </button>
+        <div class="tabs" role="tablist">
+          <button
+            class="tab active"
+            type="button"
+            role="tab"
+            aria-selected="true"
+            data-auth-tab="login"
+          >
+            Login
+          </button>
+          <button
+            class="tab"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            data-auth-tab="signup"
+          >
+            Sign up
+          </button>
+          <button
+            class="tab"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            data-auth-tab="forgot"
+          >
+            Forgot password
+          </button>
+        </div>
+
+        <div class="tab-panels">
+          <form
+            id="login-form"
+            class="form auth-form active"
+            data-auth-panel="login"
+          >
+            <h2>Welcome back</h2>
+            <div class="form-field">
+              <label for="login-email" class="form-label">Email</label>
+              <input
+                id="login-email"
+                name="email"
+                class="input"
+                type="email"
+                required
+              />
+            </div>
+            <div class="form-field">
+              <label for="login-password" class="form-label">Password</label>
+              <input
+                id="login-password"
+                name="password"
+                class="input"
+                type="password"
+                minlength="6"
+                required
+              />
+            </div>
+            <button type="submit" class="btn btn-primary">Login</button>
+            
+            <div class="auth-divider">
+              <span>or</span>
+            </div>
+            
+            <div class="social-auth">
+              <button type="button" class="btn btn-social btn-google" data-social-auth="google">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17.64 9.2c0-.637-.057-1.251-.164-1.84H9v3.481h4.844c-.209 1.125-.843 2.078-1.796 2.717v2.258h2.908c1.702-1.567 2.684-3.874 2.684-6.615z" fill="#4285F4"/>
+                  <path d="M9 18c2.43 0 4.467-.806 5.956-2.184l-2.908-2.258c-.806.54-1.837.86-3.048.86-2.344 0-4.328-1.584-5.036-3.711H.957v2.332C2.438 15.983 5.482 18 9 18z" fill="#34A853"/>
+                  <path d="M3.964 10.707c-.18-.54-.282-1.117-.282-1.707s.102-1.167.282-1.707V4.961H.957C.348 6.175 0 7.55 0 9s.348 2.825.957 4.039l3.007-2.332z" fill="#FBBC05"/>
+                  <path d="M9 3.58c1.321 0 2.508.454 3.44 1.345l2.582-2.58C13.463.891 11.426 0 9 0 5.482 0 2.438 2.017.957 4.961L3.964 7.293C4.672 5.163 6.656 3.58 9 3.58z" fill="#EA4335"/>
+                </svg>
+                Continue with Google
+              </button>
+              <button type="button" class="btn btn-social btn-facebook" data-social-auth="facebook">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M18 9c0-4.97-4.03-9-9-9S0 4.03 0 9c0 4.42 3.258 8.137 7.608 8.807v-6.23H5.31V9h2.298V7.02c0-2.27 1.353-3.524 3.421-3.524.99 0 2.027.177 2.027.177v2.23h-1.142c-1.125 0-1.476.698-1.476 1.414V9h2.51l-.401 2.577h-2.109v6.23C14.742 17.137 18 13.42 18 9z" fill="#1877F2"/>
+                </svg>
+                Continue with Facebook
+              </button>
+            </div>
+          </form>
+
+          <form
+            id="signup-form"
+            class="form auth-form"
+            data-auth-panel="signup"
+          >
+            <h2>Create account</h2>
+            <div class="form-field">
+              <label for="signup-name" class="form-label">Full name</label>
+              <input
+                id="signup-name"
+                name="name"
+                class="input"
+                type="text"
+                required
+              />
+            </div>
+            <div class="form-field">
+              <label for="signup-email" class="form-label">Email</label>
+              <input
+                id="signup-email"
+                name="email"
+                class="input"
+                type="email"
+                required
+              />
+            </div>
+            <div class="form-field">
+              <label for="signup-password" class="form-label">Password</label>
+              <input
+                id="signup-password"
+                name="password"
+                class="input"
+                type="password"
+                minlength="6"
+                required
+              />
+            </div>
+            <div class="form-field">
+              <label class="checkbox-label">
+                <input
+                  type="checkbox"
+                  id="signup-terms"
+                  name="terms"
+                  required
+                />
+                <span>I agree to the <a href="#" target="_blank">Terms and Conditions</a></span>
+              </label>
+            </div>
+            <button type="submit" class="btn btn-primary">Sign up</button>
+            
+            <div class="auth-divider">
+              <span>or</span>
+            </div>
+            
+            <div class="social-auth">
+              <button type="button" class="btn btn-social btn-google" data-social-auth="google">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17.64 9.2c0-.637-.057-1.251-.164-1.84H9v3.481h4.844c-.209 1.125-.843 2.078-1.796 2.717v2.258h2.908c1.702-1.567 2.684-3.874 2.684-6.615z" fill="#4285F4"/>
+                  <path d="M9 18c2.43 0 4.467-.806 5.956-2.184l-2.908-2.258c-.806.54-1.837.86-3.048.86-2.344 0-4.328-1.584-5.036-3.711H.957v2.332C2.438 15.983 5.482 18 9 18z" fill="#34A853"/>
+                  <path d="M3.964 10.707c-.18-.54-.282-1.117-.282-1.707s.102-1.167.282-1.707V4.961H.957C.348 6.175 0 7.55 0 9s.348 2.825.957 4.039l3.007-2.332z" fill="#FBBC05"/>
+                  <path d="M9 3.58c1.321 0 2.508.454 3.44 1.345l2.582-2.58C13.463.891 11.426 0 9 0 5.482 0 2.438 2.017.957 4.961L3.964 7.293C4.672 5.163 6.656 3.58 9 3.58z" fill="#EA4335"/>
+                </svg>
+                Continue with Google
+              </button>
+              <button type="button" class="btn btn-social btn-facebook" data-social-auth="facebook">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M18 9c0-4.97-4.03-9-9-9S0 4.03 0 9c0 4.42 3.258 8.137 7.608 8.807v-6.23H5.31V9h2.298V7.02c0-2.27 1.353-3.524 3.421-3.524.99 0 2.027.177 2.027.177v2.23h-1.142c-1.125 0-1.476.698-1.476 1.414V9h2.51l-.401 2.577h-2.109v6.23C14.742 17.137 18 13.42 18 9z" fill="#1877F2"/>
+                </svg>
+                Continue with Facebook
+              </button>
+            </div>
+          </form>
+
+          <form
+            id="forgot-form"
+            class="form auth-form"
+            data-auth-panel="forgot"
+          >
+            <h2>Reset password</h2>
+            <div class="form-field">
+              <label for="forgot-email" class="form-label">
+                Email address
+              </label>
+              <input
+                id="forgot-email"
+                name="email"
+                class="input"
+                type="email"
+                required
+              />
+            </div>
+            <button type="submit" class="btn btn-primary">
+              Send reset link
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Live chat panel (toggle) -->
+    <aside
+      class="chat-panel"
+      id="chat-panel"
+      aria-hidden="true"
+      aria-label="Live chat"
+    >
+      <header class="chat-header">
+        <h2>SwiftShip Support</h2>
+        <button
+          class="icon-button"
+          type="button"
+          aria-label="Close chat"
+          data-toggle-chat
+        >
+          ×
+        </button>
+      </header>
+      <div class="chat-body">
+        <p class="chat-message bot">
+          Hi! This is a demo chat. Share your tracking ID or question and we’ll
+          get back to you shortly.
+        </p>
+      </div>
+      <form class="chat-input-row" id="chat-form">
+        <label class="visually-hidden" for="chat-input">Chat message</label>
+        <input
+          id="chat-input"
+          type="text"
+          class="input input-sm"
+          placeholder="Type a message..."
+          autocomplete="off"
+        />
+        <button type="submit" class="btn btn-primary btn-sm">
+          Send
+        </button>
+      </form>
+    </aside>
+
+    <!-- Toast / Notification container -->
+    <div class="toast-stack" aria-live="polite" aria-atomic="true"></div>
+
+    <script src="scripts.js"></script>
+  </body>
+  </html>
+
+
